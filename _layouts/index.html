@@ -29,8 +29,8 @@
           <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
           <div class="project-btns">
             {% if site.show_downloads %}
-              <a href="{{ site.github.zip_url }}" class="btn">About Me</a>
-              <a href="{{ site.github.tar_url }}" class="btn">Get CV</a>
+              <a href="/about" class="btn">About Me</a>
+              <a target="_blank" href="{{ '/assets/files/' | append: site.cv_url }}" class="btn">Get CV</a>
             {% endif %}
           </div>
         </div>
@@ -63,6 +63,7 @@
         <div class="dropup">
           <button class="dropbtn">Nav</button>
           <div class="dropup-content">
+            <a class="dropbtn-link" href="/about">About</a>
             <a href="#">Top</a>
             <a href="#introduce">Intro</a>
             <a href="#service">Service</a>

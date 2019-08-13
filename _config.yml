@@ -17,9 +17,13 @@ title: Benson Liao
 email: skylock77@gmail.com
 show_downloads: true
 show_social_links: true
+cv_url: "BensonLiao_CV.pdf"
 description: >- # this means to ignore newlines until "baseurl:"
   Hell0~ This is my portfolio.
-  See who I am, my works before and what I'm capable of.
+  See who I am, my works before and what I can do for you.
+about_me: >- # this means to ignore newlines until "baseurl:"
+  More about myself.
+  What I like or like to do, and my exciting moment.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 facebook_username: boshun.liao
