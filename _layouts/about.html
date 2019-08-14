@@ -19,7 +19,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/font-awesome.min.css' }}">
-    <script src="{{ '/assets/js/main.js' }}"></script>
+    <link rel="stylesheet" href="{{ '/assets/css/swiper.min.css' }}">
+    <script src="{{ '/assets/js/swiper.min.js' }}"></script>
+    <link rel="stylesheet" href="{{ '/assets/css/about.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script src="{{ '/assets/js/main.js?v=' | append: site.github.build_revision | relative_url }}"></script>
   </head>
   <body>
     <header id="banner" role="banner">
@@ -59,16 +62,65 @@
     <main id="content" class="main-content" role="main">
       {{ content }}
 
+      <!-- Slider main container -->
+      <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="{{ '/assets/img/lucky_1.jpg' }}" />
+              </div>
+              <div class="swiper-slide">
+              <img src="{{ '/assets/img/lucky_2.jpg' }}" />
+              </div>
+              <div class="swiper-slide">
+                <img src="{{ '/assets/img/group_shot.jpg' }}" />
+              </div>
+              <div class="swiper-slide">
+                <img src="{{ '/assets/img/fb_visit.jpg' }}" />
+              </div>
+              <div class="swiper-slide">
+                <img src="{{ '/assets/img/google_visit.jpg' }}" />
+              </div>
+              <div class="swiper-slide">
+                <img src="{{ '/assets/img/line_hq.jpg' }}" />
+              </div>
+              <div class="swiper-slide">
+                <img src="{{ '/assets/img/line_techpulse.jpg' }}" />
+              </div>
+              <div class="swiper-slide">
+                <img src="{{ '/assets/img/playing_guitar.jpg' }}" />
+              </div>
+              <div class="swiper-slide">
+                <img src="{{ '/assets/img/taichung_travel.jpg' }}" />
+              </div>
+              <div class="swiper-slide">
+                <img src="{{ '/assets/img/cat_wink.jpg' }}" />
+              </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+      </div>
+
+      <!-- Fixed navigate button -->
       <div class="fixed-nav-dropup">
-        <div class="dropup">
-          <button class="dropbtn">Nav</button>
-          <div class="dropup-content">
+          <div class="dropup">
+            <button class="dropbtn">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="dropup-content">
               <a class="dropbtn-link" href="/">Home</a>
-            <a href="#">Top</a>
-            <a href="#introduce">Intro</a>
+              <a href="#">Top</a>
+            </div>
           </div>
         </div>
-      </div>
 
       <footer class="site-footer">
         {% if site.github.is_project_page %}
@@ -79,5 +131,6 @@
         </span>
       </footer>
     </main>
+    <script src="{{ '/assets/js/newSwiper.js?v=' | append: site.github.build_revision | relative_url }}"></script>
   </body>
 </html>

@@ -16,7 +16,7 @@ Live in Taiwan, born in Taipei city and study in Yunlin city.
 
 Love watch movies/concert/sports game, sight seeing, play badminton, video games.
 
-Experiencing several years of software developing and full-stack engineer.
+Experienced several years of software developing and full-stack engineering.
 
 Recently focus on front-end developing,
 try to make some funny, useful, well-performance web applications.

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-
     {% if site.google_analytics %}
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
       <script>
@@ -12,14 +11,13 @@
       </script>
     {% endif %}
     <meta charset="UTF-8">
-
-{% seo %}
+    {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/font-awesome.min.css' }}">
-    <script src="{{ '/assets/js/main.js' }}"></script>
+    <script src="{{ '/assets/js/main.js?v=' | append: site.github.build_revision | relative_url }}"></script>
   </head>
   <body>
     <header id="banner" role="banner">
@@ -59,9 +57,12 @@
     <main id="content" class="main-content" role="main">
       {{ content }}
 
+      <!-- Fixed navigate button -->
       <div class="fixed-nav-dropup">
         <div class="dropup">
-          <button class="dropbtn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+          <button class="dropbtn">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
           <div class="dropup-content">
             <a class="dropbtn-link" href="/about">About</a>
             <a href="#">Top</a>
