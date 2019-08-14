@@ -57,6 +57,9 @@ header > .container {
   max-width: 980px;
   margin: 0 auto;
   padding-top: 0.5rem;
+  @media screen and (max-width: 42em) {
+    padding-top: 0.1rem;
+  }
   transition: all 0.2s ease;
 }
 
@@ -66,7 +69,7 @@ header > .container .project-name {
     font-size: 3rem;
   }
   @media screen and (max-width: 42em) {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -78,15 +81,15 @@ header > .container .project-tagline {
   margin-bottom: 0;
   font-size: 1.5rem;
   @media screen and (min-width: 42em) and (max-width: 64em) {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   @media screen and (max-width: 42em) {
-    font-size: 1.3rem;
+    font-size: 0.8rem;
   }
 }
 
 header > .container .project-btns {
-  display: inherit;
+  display: inline-flex;
 }
 
 header > .container .btn {
@@ -94,10 +97,12 @@ header > .container .btn {
   margin: 0.5rem;
   font-size: 1.2rem;
   @media screen and (min-width: 42em) and (max-width: 64em) {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   @media screen and (max-width: 42em) {
-    font-size: 1rem;
+    padding: 0.1rem 0.5rem;
+    margin: 0.1rem;
+    font-size: 0.5rem;
   }
 }
 
@@ -112,21 +117,23 @@ header.sticky > .container {
 header.sticky .project-name {
   margin: 0;
   font-size: 3rem;
+  @media screen and (min-width: 42em) and (max-width: 64em) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 42em) {
+    font-size: 1.5rem;
+  }
 }
 
 header.sticky .project-info {
   display: inline-block;
   margin-bottom: 0;
-  font-size: 2.5rem;
-}
-
-header.sticky .project-tagline {
   font-size: 1.5rem;
   @media screen and (min-width: 42em) and (max-width: 64em) {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   @media screen and (max-width: 42em) {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -248,7 +255,9 @@ table td a::after {
 .fixed-nav-dropup {
   position: fixed;
   bottom: 40px;
-  right: 20px;
+  // left: calc(100vw - 95px);
+  right: 0;
+  direction: rtl;
 }
 
 /* The container <div> - needed to position the dropup content */
@@ -261,28 +270,24 @@ table td a::after {
 .dropbtn {
   background-color: $base-color;
   color: $base-color-text;
-  padding: 16px;
-  font-size: 16px;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
   border: none;
-}
-
-.dropbtn::after {
-  content: "";
-  max-width: 0px;
 }
 
 /* Dropup content (Hidden by Default) */
 .dropup-content {
-  // display: none;
   max-height: 0;
   position: absolute;
-  bottom: 50px;
+  bottom: 60px;
   background-color: #f1f1f1;
   width: 100%;
-  min-width: 100px;
+  max-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba($base-color-link, 0.2);
   z-index: 1;
   overflow: auto;
+  direction: ltr;
 }
 
 /* Links inside the dropup */
@@ -306,7 +311,6 @@ table td a::after {
 
 /* Show the dropup menu on hover */
 .dropup:hover .dropup-content {
-  // display: block;
   // auto height won't work, must set something bigger than actual element
   max-height: 500px;
   transition: max-height 0.2s ease-in;
@@ -315,10 +319,6 @@ table td a::after {
 /* Change the background color of the dropup button when the dropup content is shown */
 .dropup:hover .dropbtn {
   background-color: $base-color-gradient;
-  transition: background-color 0.2s ease-in;
-}
-
-.dropup:hover .dropbtn::after {
-  max-width: 100%;
-  transition: max-width 0.2s ease-in;
+  width: 100px;
+  transition: background-color 0.2s ease-in, width 0.2s ease-in;
 }

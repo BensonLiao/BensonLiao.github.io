@@ -72,10 +72,11 @@ const timing = "ease-in-out";
 
 const anchorClick = event => {
   console.log("anchor clicks");
+  const header = document.querySelector("#banner");
   const hash = event.target.hash;
   if (hash !== "") {
     const targetElement = document.querySelector(hash);
-    const targetScrollY = targetElement.offsetTop;
+    const targetScrollY = targetElement.offsetTop - header.clientHeight;
     scrollToIdSmooth(targetScrollY, duration, timing);
   } else {
     scrollTopSmooth(getWindowScrollY(), duration, timing);
