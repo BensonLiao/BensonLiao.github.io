@@ -43,19 +43,19 @@ header {
   width: 0%;
 }
 
-#content {
-  margin: 260px auto 0 auto;
-}
+// #content {
+//   margin: 260px auto 0 auto;
+// }
 
-#content.sticky {
-  margin: 160px auto 0 auto;
-}
+// #content.sticky {
+//   margin: 160px auto 0 auto;
+// }
 
 header > .container {
   display: block;
   align-items: baseline;
   max-width: 980px;
-  margin: 0 auto;
+  margin-left: 1rem;
   padding-top: 0.5rem;
   @media screen and (max-width: 42em) {
     padding-top: 0.1rem;
@@ -75,6 +75,7 @@ header > .container .project-name {
 
 header > .container .project-info {
   display: inline-block;
+  align-items: center;
 }
 
 header > .container .project-tagline {
@@ -95,14 +96,15 @@ header > .container .project-btns {
 header > .container .btn {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
-  font-size: 1.2rem;
+  min-width: 100px;
+  font-size: 1.5rem;
   @media screen and (min-width: 42em) and (max-width: 64em) {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   @media screen and (max-width: 42em) {
     padding: 0.1rem 0.5rem;
     margin: 0.1rem;
-    font-size: 0.5rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -125,20 +127,21 @@ header.sticky .project-name {
   }
 }
 
+header.sticky .project-tagline {
+  display: none;
+}
+
 header.sticky .project-info {
-  display: inline-block;
+  display: inline-flex;
   margin-bottom: 0;
   font-size: 1.5rem;
   @media screen and (min-width: 42em) and (max-width: 64em) {
     font-size: 1.3rem;
   }
   @media screen and (max-width: 42em) {
+    display: inline-block;
     font-size: 1.1rem;
   }
-}
-
-header.sticky > .container .project-btns {
-  display: inline-flex;
 }
 
 header.sticky .btn {
@@ -150,11 +153,7 @@ ul.icons {
   display: inline-flex;
   list-style: none;
   margin: 0;
-}
-
-ul.icons.sticky {
-  display: inline-block;
-  list-style: none;
+  padding-inline-start: 1rem;
 }
 
 ul.icons > li {
@@ -187,7 +186,7 @@ ul.icons > li .icon:before {
 }
 
 /* Social Icons*/
-.social-icons a,
+ul.social-icons a,
 i,
 span {
   border: none;
@@ -196,7 +195,7 @@ span {
   color: $base-color-text;
 }
 
-.social-icons a:hover {
+ul.social-icons a:hover {
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 }
 

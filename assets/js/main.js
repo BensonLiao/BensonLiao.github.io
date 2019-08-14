@@ -64,7 +64,7 @@ const getWindowScrollY = () => {
     : isCSS1Compat
     ? document.documentElement.scrollTop
     : document.body.scrollTop;
-  return windowScrollY;
+  return windowScrollY - window.headerHeight;
 };
 
 const duration = 300;
@@ -72,11 +72,10 @@ const timing = "ease-in-out";
 
 const anchorClick = event => {
   console.log("anchor clicks");
-  const header = document.querySelector("#banner");
   const hash = event.target.hash;
   if (hash !== "") {
     const targetElement = document.querySelector(hash);
-    const targetScrollY = targetElement.offsetTop - header.clientHeight;
+    const targetScrollY = targetElement.offsetTop - window.headerHeight;
     scrollToIdSmooth(targetScrollY, duration, timing);
   } else {
     scrollTopSmooth(getWindowScrollY(), duration, timing);
@@ -84,8 +83,17 @@ const anchorClick = event => {
 };
 
 window.scrollPos = 0;
+window.headerHeightInit = 0;
+window.headerHeight = 0;
 window.onload = event => {
   console.log("page is fully loaded");
+  window.headerHeightInit = document.querySelector("#banner").clientHeight;
+  const contentElement = document.querySelector("#content");
+  // contentElement.style.marginTop = window.headerHeightInit + "px";
+  contentElement.setAttribute(
+    "style",
+    "margin-top: " + window.headerHeightInit + "px;"
+  );
   document.addEventListener("scroll", () => {
     window.scrollPos =
       document.documentElement.scrollTop || document.body.scrollTop;
@@ -97,12 +105,32 @@ window.onload = event => {
 };
 window.onscroll = event => {
   // console.log("window.scrollPos: ", window.scrollPos);
+  const headerHeight = document.querySelector("#banner").clientHeight;
+  const contentElement = document.querySelector("#content");
+  // contentElement.style.marginTop = window.headerHeight + "px";
+  // console.log("window.headerHeight", window.headerHeight);
+  window.headerHeight = headerHeight;
+  // Change margin-top onscroll, but when we scroll back to top (scrollPos == 0)
+  // clientHeight will not receive as it first loaded.
+  // So we declare init and scroll header height, set margin-top to initial
+  // header height and only set margin-top when scroll header height are
+  // different from init header height.
   if (window.scrollPos > 0) {
     document.getElementById("banner").classList.add("sticky");
     document.getElementById("social-icons").classList.add("sticky");
+    if (headerHeightInit !== headerHeight) {
+      contentElement.setAttribute(
+        "style",
+        "margin-top: " + headerHeight + "px;"
+      );
+    }
   } else {
     document.getElementById("banner").classList.remove("sticky");
     document.getElementById("social-icons").classList.remove("sticky");
+    contentElement.setAttribute(
+      "style",
+      "margin-top: " + window.headerHeightInit + "px;"
+    );
   }
 
   // Scroll indicator
