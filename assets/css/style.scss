@@ -46,8 +46,9 @@ header {
 header > .container {
   display: block;
   align-items: baseline;
-  max-width: 980px;
+  max-width: 100vw;
   margin-left: 1rem;
+  margin-right: 1rem;
   padding-top: 0.5rem;
   @media screen and (max-width: 42em) {
     padding-top: 0.1rem;
@@ -106,6 +107,7 @@ header.sticky > .container {
   font-size: 0.8rem;
   padding: 0;
   align-items: center;
+  justify-content: center;
 }
 
 header.sticky .project-name {

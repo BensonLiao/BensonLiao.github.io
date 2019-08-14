@@ -26,6 +26,7 @@ Experienced several years of software developing and full-stack engineering.
 Recently focus on front-end developing,
 try to make some funny, useful, well-performance web applications.
 
-Love my **Lucky** and she'll always in my memory...
+Love my **Lucky**, she's a adorable shiba.
+And she'll always in my memory...<i class="fa fa-heart" aria-hidden="true"></i>
 
 ---
