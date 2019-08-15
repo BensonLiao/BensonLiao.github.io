@@ -94,7 +94,7 @@ const filterTable = filter => {
     if (td) {
       const txtValue = td.textContent || td.innerText;
       if (txtValue.indexOf(currentFilter) > -1) {
-        tr[i].style.display = "";
+        tr[i].style.display = "table-row";
       } else {
         tr[i].style.display = "none";
       }
