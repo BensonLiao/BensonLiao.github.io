@@ -36,7 +36,6 @@ const scrollTopSmooth = (initY, duration = 300, timingName = "linear") => {
  * @param {string} timingName - timing function name. Can be one of linear, ease-in, ease-out, ease-in-out
  */
 const scrollToIdSmooth = (targetY, duration = 300, timingName = "linear") => {
-  console.log("targetY", targetY);
   const timingFunc = TIMINGFUNC_MAP[timingName];
   let start = null;
   const step = timestamp => {
@@ -71,7 +70,6 @@ const duration = 300;
 const timing = "ease-in-out";
 
 const anchorClick = event => {
-  console.log("anchor clicks");
   const hash = event.target.hash;
   if (hash !== "") {
     const targetElement = document.querySelector(hash);
@@ -125,11 +123,7 @@ window.onload = event => {
   console.log("page is fully loaded");
   window.headerHeightInit = document.querySelector("#banner").clientHeight;
   const contentElement = document.querySelector("#content");
-  // contentElement.style.marginTop = window.headerHeightInit + "px";
-  contentElement.setAttribute(
-    "style",
-    "margin-top: " + window.headerHeightInit + "px;"
-  );
+  contentElement.style.marginTop = window.headerHeightInit + "px";
   document.addEventListener("scroll", () => {
     window.scrollPos =
       document.documentElement.scrollTop || document.body.scrollTop;
@@ -144,8 +138,6 @@ window.onscroll = event => {
   // console.log("window.scrollPos: ", window.scrollPos);
   const headerHeight = document.querySelector("#banner").clientHeight;
   const contentElement = document.querySelector("#content");
-  // contentElement.style.marginTop = window.headerHeight + "px";
-  // console.log("window.headerHeight", window.headerHeight);
   window.headerHeight = headerHeight;
   // Change margin-top onscroll, but when we scroll back to top (scrollPos == 0)
   // clientHeight will not receive as it first loaded.
@@ -156,10 +148,7 @@ window.onscroll = event => {
     document.getElementById("banner").classList.add("sticky");
     document.getElementById("social-icons").classList.add("sticky");
     if (headerHeightInit !== headerHeight) {
-      contentElement.setAttribute(
-        "style",
-        "margin-top: " + headerHeight + "px;"
-      );
+      contentElement.style.marginTop = window.headerHeight + "px";
     }
   } else {
     document.getElementById("banner").classList.remove("sticky");

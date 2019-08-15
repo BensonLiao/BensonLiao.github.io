@@ -6,7 +6,8 @@
 $base-color: #159957;
 $base-color-gradient: #155799;
 $base-color-bg: #282c35;
-$base-color-link: #15c26b;
+$base-color-link: #1a7de0;
+$base-color-link-hover: #15c26b;
 $base-color-text: #fff;
 
 /* Body */
@@ -15,6 +16,15 @@ body {
   background-color: $base-color-bg;
   color: $base-color-text;
   scroll-behavior: smooth;
+}
+
+body a {
+  color: $base-color-link;
+}
+
+body a:hover {
+  color: $base-color-link-hover;
+  transition: color 0.2s ease-in;
 }
 
 /* Header */
@@ -231,7 +241,6 @@ ul.social-icons a:hover {
 /* Table */
 #content table {
   display: table;
-  width: 90vw;
   -webkit-overflow-scrolling: auto;
 }
 
@@ -300,7 +309,7 @@ ul.social-icons a:hover {
   background-color: #f1f1f1;
   width: 100%;
   max-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba($base-color-link, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba($base-color-link-hover, 0.2);
   z-index: 1;
   overflow: auto;
   direction: ltr;
