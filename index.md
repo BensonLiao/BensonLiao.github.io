@@ -56,23 +56,23 @@ _Make apps run as fast as possible_
 
 **\*Click on Type column in any row to filter, click again to reset filter**
 
-| Type               | Description                                                                                          | Link                                                                                            |
-| :----------------- | :--------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------- |
-| other              | Mocking page for a Facebook post                                                                     | [open ](https://bensonliao.github.io/Mazu-Did-Not-Say-That-Shit){:target="\_blank"}<br>`latest` |
-| LINE-bot           | Boilerplate for LINE's [LIFF](https://developers.line.biz/en/docs/liff/overview/){:target="\_blank"} | [open ](https://bensonliao.github.io/liff-react-boilerplate/){:target="\_blank"}                |
-| LINE-bot           | LINE-bot API helper for imgur.com                                                                    | [open ](https://github.com/BensonLiao/imgur-api-go-v3){:target="\_blank"}                       |
-| LINE-bot           | LINE bot server                                                                                      | [open ](https://my-line-simple-bot.herokuapp.com/){:target="\_blank"}                           |
-| NLP                | A QA system base on indexed news data                                                                | [open ](http://rsp.itc.ntnu.edu.tw/ECORE/){:target="\_blank"}                                   |
-| data-visualization | Discover NTNU year stats visually                                                                    | [open ](http://www.iro.ntnu.edu.tw/web/?Yreport){:target="\_blank"}                             |
-| other              | Data report system for NTNU's faculty<br>\*guest login: test/123                                     | [open ](http://yreport.iro.ntnu.edu.tw/){:target="\_blank"}                                     |
-| other              | Deletable todo-list with redux                                                                       | [open ](https://github.com/BensonLiao/redux-todos-with-delete){:target="\_blank"}               |
-| other              | Get sub-rediit from API server with redux-saga                                                       | [open ](https://github.com/BensonLiao/redux-reddit-api){:target="\_blank"}                      |
-| data-visualization | Playground for React & D3.js                                                                         | [open ](https://codesandbox.io/s/p3zjl1yr0j){:target="\_blank"}                                 |
+| Type               | Description                                                                                                                      | Link                                                                                                                        |
+| :----------------- | :------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| other              | Mocking page for a Facebook post                                                                                                 | [open ](https://bensonliao.github.io/Mazu-Did-Not-Say-That-Shit){:target="\_blank"}{:rel="noopener noreferrer"}<br>`latest` |
+| LINE-bot           | Boilerplate for LINE's [LIFF](https://developers.line.biz/en/docs/liff/overview/){:target="\_blank"}{:rel="noopener noreferrer"} | [open ](https://bensonliao.github.io/liff-react-boilerplate/){:target="\_blank"}{:rel="noopener noreferrer"}                |
+| LINE-bot           | LINE-bot API helper for imgur.com                                                                                                | [open ](https://github.com/BensonLiao/imgur-api-go-v3){:target="\_blank"}{:rel="noopener noreferrer"}                       |
+| LINE-bot           | LINE bot server                                                                                                                  | [open ](https://my-line-simple-bot.herokuapp.com/){:target="\_blank"}{:rel="noopener noreferrer"}                           |
+| NLP                | A QA system base on indexed news data                                                                                            | [open ](http://rsp.itc.ntnu.edu.tw/ECORE/){:target="\_blank"}{:rel="noopener noreferrer"}                                   |
+| data-visualization | Discover NTNU year stats visually                                                                                                | [open ](http://www.iro.ntnu.edu.tw/web/?Yreport){:target="\_blank"}{:rel="noopener noreferrer"}                             |
+| other              | Data report system for NTNU's faculty<br>\*guest login: test/123                                                                 | [open ](http://yreport.iro.ntnu.edu.tw/){:target="\_blank"}{:rel="noopener noreferrer"}                                     |
+| other              | Deletable todo-list with redux                                                                                                   | [open ](https://github.com/BensonLiao/redux-todos-with-delete){:target="\_blank"}{:rel="noopener noreferrer"}               |
+| other              | Get sub-rediit from API server with redux-saga                                                                                   | [open ](https://github.com/BensonLiao/redux-reddit-api){:target="\_blank"}{:rel="noopener noreferrer"}                      |
+| data-visualization | Playground for React & D3.js                                                                                                     | [open ](https://codesandbox.io/s/p3zjl1yr0j){:target="\_blank"}{:rel="noopener noreferrer"}                                 |
 
 Add my LINE bot as a friend:
 
 Press the button
-<a href="http://nav.cx/3tDhraO">
+<a href="http://nav.cx/3tDhraO" target="_blank" rel="noopener noreferrer">
 <img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" height="36" border="0">
 </a>
 or scan the QRcode.
