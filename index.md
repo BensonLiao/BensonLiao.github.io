@@ -67,6 +67,7 @@ _Make apps run as fast as possible_
 | other              | Data report system for NTNU's faculty<br>\*guest login: test/123                                     | [open ](http://yreport.iro.ntnu.edu.tw/){:target="\_blank"}                                     |
 | other              | Deletable todo-list with redux                                                                       | [open ](https://github.com/BensonLiao/redux-todos-with-delete){:target="\_blank"}               |
 | other              | Get sub-rediit from API server with redux-saga                                                       | [open ](https://github.com/BensonLiao/redux-reddit-api){:target="\_blank"}                      |
+| data-visualization | Playground for React & D3.js                                                                         | [open ](https://codesandbox.io/s/p3zjl1yr0j){:target="\_blank"}                                 |
 
 Add my LINE bot as a friend:
 
