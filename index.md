@@ -49,22 +49,24 @@ _Make apps run as fast as possible_
 
 **Type definition:**
 
-- **NLP: Natural Languagw Processing**
+- **NLP: Natural Language Processing**
 - **data-visualization: make data visualize and interactable through web**
 - **LINE-bot: front-end or back-end app for LINE bot**
 - **other: web apps for faculty, side project or practice**
 
-| Type               | Description                                    | Link                                                                                        |
-| :----------------- | :--------------------------------------------- | :------------------------------------------------------------------------------------------ |
-| other              | Mocking page for a Facebook post               | [open ](https://bensonliao.github.io/Mazu-Did-Not-Say-That-Shit){:target="\_blank"}`latest` |
-| LINE-bot           | Boilerplate for LINE's LIFF                    | [open ](https://bensonliao.github.io/liff-react-boilerplate/){:target="\_blank"}            |
-| LINE-bot           | LINE-bot API helper for imgur.com              | [open ](https://github.com/BensonLiao/imgur-api-go-v3){:target="\_blank"}                   |
-| LINE-bot           | LINE bot server                                | [open ](https://my-line-simple-bot.herokuapp.com/){:target="\_blank"}                       |
-| NLP                | A QA system base on indexed news data          | [open ](http://rsp.itc.ntnu.edu.tw/ECORE/){:target="\_blank"}                               |
-| data-visualization | Discover NTNU year stats visually              | [open ](http://www.iro.ntnu.edu.tw/web/?Yreport){:target="\_blank"}                         |
-| other              | Data report system for NTNU's faculty          | [open ](http://yreport.iro.ntnu.edu.tw/){:target="\_blank"} \* guest login: test/123        |
-| other              | Deletable todo-list with redux                 | [open ](https://github.com/BensonLiao/redux-todos-with-delete){:target="\_blank"}           |
-| other              | Get sub-rediit from API server with redux-saga | [open ](https://github.com/BensonLiao/redux-reddit-api){:target="\_blank"}                  |
+**\*Click on Type column in any row to filter, click again to reset filter**
+
+| Type               | Description                                                                                          | Link                                                                                            |
+| :----------------- | :--------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------- |
+| other              | Mocking page for a Facebook post                                                                     | [open ](https://bensonliao.github.io/Mazu-Did-Not-Say-That-Shit){:target="\_blank"}<br>`latest` |
+| LINE-bot           | Boilerplate for LINE's [LIFF](https://developers.line.biz/en/docs/liff/overview/){:target="\_blank"} | [open ](https://bensonliao.github.io/liff-react-boilerplate/){:target="\_blank"}                |
+| LINE-bot           | LINE-bot API helper for imgur.com                                                                    | [open ](https://github.com/BensonLiao/imgur-api-go-v3){:target="\_blank"}                       |
+| LINE-bot           | LINE bot server                                                                                      | [open ](https://my-line-simple-bot.herokuapp.com/){:target="\_blank"}                           |
+| NLP                | A QA system base on indexed news data                                                                | [open ](http://rsp.itc.ntnu.edu.tw/ECORE/){:target="\_blank"}                                   |
+| data-visualization | Discover NTNU year stats visually                                                                    | [open ](http://www.iro.ntnu.edu.tw/web/?Yreport){:target="\_blank"}                             |
+| other              | Data report system for NTNU's faculty<br>\*guest login: test/123                                     | [open ](http://yreport.iro.ntnu.edu.tw/){:target="\_blank"}                                     |
+| other              | Deletable todo-list with redux                                                                       | [open ](https://github.com/BensonLiao/redux-todos-with-delete){:target="\_blank"}               |
+| other              | Get sub-rediit from API server with redux-saga                                                       | [open ](https://github.com/BensonLiao/redux-reddit-api){:target="\_blank"}                      |
 
 Add my LINE bot as a friend:
 

@@ -82,6 +82,42 @@ const anchorClick = event => {
   }
 };
 
+let currentFilter = "";
+const filterTable = filter => {
+  if (currentFilter !== filter) {
+    currentFilter = filter;
+  } else {
+    currentFilter = "";
+  }
+  const table = document.getElementsByTagName("table")[0];
+  const tr = table.getElementsByTagName("tr");
+  for (let i = 0; i < tr.length; i++) {
+    const td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      const txtValue = td.textContent || td.innerText;
+      if (txtValue.indexOf(currentFilter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+};
+
+const addTableFilter = () => {
+  const table = document.getElementsByTagName("table")[0];
+  const tr = table.getElementsByTagName("tr");
+  for (let i = 0; i < tr.length; i++) {
+    const td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      const txtValue = td.textContent || td.innerText;
+      td.onclick = () => {
+        filterTable(txtValue);
+      };
+    }
+  }
+};
+
 window.scrollPos = 0;
 window.headerHeightInit = 0;
 window.headerHeight = 0;
@@ -102,6 +138,7 @@ window.onload = event => {
   for (let i = 0; i < anchorLinks.length; i++) {
     anchorLinks[i].addEventListener("click", anchorClick);
   }
+  addTableFilter();
 };
 window.onscroll = event => {
   // console.log("window.scrollPos: ", window.scrollPos);

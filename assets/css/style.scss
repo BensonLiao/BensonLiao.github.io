@@ -228,8 +228,25 @@ ul.social-icons a:hover {
   margin: -160px 0 0; /* negative fixed header height */
 }
 
+/* Table */
+#content table {
+  display: table;
+  width: 90vw;
+  -webkit-overflow-scrolling: auto;
+}
+
+#content table tr td:first-child {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#content table tr td:first-child:hover {
+  color: $base-color;
+  transition: color 0.2s ease-in;
+}
+
 /* Table links icon */
-table td a:after {
+#content table td a:after {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: FontAwesome;
@@ -238,10 +255,15 @@ table td a:after {
   text-transform: none !important;
 }
 
-table td a::after {
+#content table td a::after {
   content: "\f08e";
   width: 24px;
   height: 24px;
+}
+
+#content table td a:hover {
+  color: $base-color;
+  transition: color 0.2s ease-in;
 }
 
 /* Fixed navigate buttons */
