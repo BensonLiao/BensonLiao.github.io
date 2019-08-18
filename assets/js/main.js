@@ -53,7 +53,7 @@ const scrollToIdSmooth = (targetY, duration = 300, timingName = "linear") => {
   window.requestAnimationFrame(step);
 };
 
-// For window.scrollY || pageYOffset compatibility
+// For window.scrollY || pageYOffset compatibility, same as pageXOffset
 const getWindowScrollY = () => {
   const supportPageOffset =
     window.pageYOffset !== undefined || window.scrollY !== undefined;
@@ -68,8 +68,11 @@ const getWindowScrollY = () => {
 
 const duration = 300;
 const timing = "ease-in-out";
-
-const anchorClick = event => {
+/**
+ * Smooth scroll to element id or top of page
+ * @param {object} event - event object
+ */
+const smoothScroll = event => {
   const hash = event.target.hash;
   if (hash !== "") {
     const targetElement = document.querySelector(hash);
@@ -81,6 +84,10 @@ const anchorClick = event => {
 };
 
 let currentFilter = "";
+/**
+ * Filter table row by string
+ * @param {string} filter - filter string
+ */
 const filterTable = filter => {
   if (currentFilter !== filter) {
     currentFilter = filter;
@@ -102,6 +109,9 @@ const filterTable = filter => {
   }
 };
 
+/**
+ * Add filter function to the first table element
+ */
 const addTableFilter = () => {
   const table = document.getElementsByTagName("table")[0];
   const tr = table.getElementsByTagName("tr");
@@ -113,6 +123,59 @@ const addTableFilter = () => {
         filterTable(txtValue);
       };
     }
+  }
+};
+
+// Animation style for dropup
+const dropupContent =
+  "max-height: 0;position: absolute;bottom: 60px;background-color: #f1f1f1;width: 100%;max-width: 100px;box-shadow: 0px 8px 16px 0px rgba($base-color-link-hover, 0.2);z-index: 1;overflow: auto;direction: ltr;transition: max-height 0.2s ease-out;";
+const dropupContentShow =
+  "max-height: 500px;transition: max-height 0.2s ease-in;";
+const dropuptn =
+  "background-color: $base-color;color: $base-color-text;width: 60px;height: 60px;font-size: 24px;border: none;transition: background-color 0.2s ease-out, width 0.2s ease-out;";
+const dropuptnShow =
+  "background-color: $base-color-gradient;width: 100px;transition: background-color 0.2s ease-in, width 0.2s ease-in;";
+
+/**
+ * Add event to dropup element for mobile or desktop
+ */
+const addDropupEvent = () => {
+  const hasTouch = "ontouchstart" in window || navigator.msMaxTouchPoints > 0;
+  const dropup = document.querySelector("#dropup");
+  const dropupContent = document.querySelector(".dropup-content");
+  const dropbtn = document.querySelector(".dropup-btn");
+  if (hasTouch) {
+    let isDropUpOpen = false;
+    document.ontouchstart = event => {
+      if (
+        !isDropUpOpen &&
+        (event.target.id === "dropup-btn" ||
+          event.target.id === "dropup-btn-icon")
+      ) {
+        isDropUpOpen = true;
+        dropupContent.setAttribute("style", dropupContentShow);
+        dropbtn.setAttribute("style", dropuptnShow);
+      } else {
+        isDropUpOpen = false;
+        dropupContent.setAttribute("style", dropupContent);
+        dropbtn.setAttribute("style", dropuptn);
+        if (
+          event.target.href !== undefined &&
+          event.target.href.indexOf("#") !== -1
+        ) {
+          smoothScroll(event);
+        }
+      }
+    };
+  } else {
+    dropup.onmouseover = () => {
+      dropupContent.setAttribute("style", dropupContentShow);
+      dropbtn.setAttribute("style", dropuptnShow);
+    };
+    dropup.onmouseout = () => {
+      dropupContent.setAttribute("style", "");
+      dropbtn.setAttribute("style", "");
+    };
   }
 };
 
@@ -130,10 +193,12 @@ window.onload = event => {
   });
   const anchorLinks = document.querySelectorAll("a[href^='#']");
   for (let i = 0; i < anchorLinks.length; i++) {
-    anchorLinks[i].addEventListener("click", anchorClick);
+    anchorLinks[i].addEventListener("click", smoothScroll);
   }
   addTableFilter();
+  addDropupEvent();
 };
+
 window.onscroll = event => {
   // console.log("window.scrollPos: ", window.scrollPos);
   const headerHeight = document.querySelector("#banner").clientHeight;

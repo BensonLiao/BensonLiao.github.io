@@ -22,7 +22,8 @@ body a {
   color: $base-color-link;
 }
 
-body a:hover {
+body a:hover,
+body a:active {
   color: $base-color-link-hover;
   transition: color 0.2s ease-in;
 }
@@ -293,7 +294,7 @@ ul.social-icons a:hover {
 }
 
 /* Dropup Button */
-.dropbtn {
+.dropup-btn {
   background-color: $base-color;
   color: $base-color-text;
   width: 60px;
@@ -325,7 +326,7 @@ ul.social-icons a:hover {
 }
 
 /* Dropup Button real links */
-.dropup-content a.dropbtn-link {
+.dropup-content a.dropup-content-link {
   text-decoration: underline;
   color: $base-color-gradient;
 }
@@ -336,15 +337,15 @@ ul.social-icons a:hover {
 }
 
 /* Show the dropup menu on hover */
-.dropup:hover .dropup-content {
-  // auto height won't work, must set something bigger than actual element
-  max-height: 500px;
-  transition: max-height 0.2s ease-in;
-}
+// auto height won't work, must set something bigger than actual element
+// .dropup:hover .dropup-content {
+//   max-height: 500px;
+//   transition: max-height 0.2s ease-in;
+// }
 
 /* Change the background color of the dropup button when the dropup content is shown */
-.dropup:hover .dropbtn {
-  background-color: $base-color-gradient;
-  width: 100px;
-  transition: background-color 0.2s ease-in, width 0.2s ease-in;
-}
+// .dropup:hover .dropbtn {
+//   background-color: $base-color-gradient;
+//   width: 100px;
+//   transition: background-color 0.2s ease-in, width 0.2s ease-in;
+// }
