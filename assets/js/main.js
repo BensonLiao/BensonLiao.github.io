@@ -142,12 +142,13 @@ const dropuptnShow =
  */
 const addDropupEvent = () => {
   const hasTouch = "ontouchstart" in window || navigator.msMaxTouchPoints > 0;
+  const contentElement = document.querySelector("#content");
   const dropup = document.querySelector("#dropup");
   const dropupContent = document.querySelector(".dropup-content");
-  const dropbtn = document.querySelector(".dropup-btn");
+  const dropbtn = document.querySelector("#dropup-btn");
   if (hasTouch) {
     let isDropUpOpen = false;
-    document.ontouchstart = event => {
+    contentElement.ontouchstart = event => {
       if (
         !isDropUpOpen &&
         (event.target.id === "dropup-btn" ||
@@ -160,11 +161,14 @@ const addDropupEvent = () => {
         isDropUpOpen = false;
         dropupContent.setAttribute("style", dropupContent);
         dropbtn.setAttribute("style", dropuptn);
-        if (
-          event.target.href !== undefined &&
-          event.target.href.indexOf("#") !== -1
-        ) {
-          smoothScroll(event);
+        if (event.target.href !== undefined) {
+          if (event.target.href.indexOf("#") !== -1) {
+            smoothScroll(event);
+          } else if (event.target.className === "dropup-content-link") {
+            window.open(event.target.href, "_self");
+          } else {
+            window.open(event.target.href);
+          }
         }
       }
     };
