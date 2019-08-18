@@ -113,6 +113,7 @@ const filterTable = filter => {
  * Add filter function to the first table element
  */
 const addTableFilter = () => {
+  if (document.getElementsByTagName("table").length === 0) return;
   const table = document.getElementsByTagName("table")[0];
   const tr = table.getElementsByTagName("tr");
   for (let i = 0; i < tr.length; i++) {
