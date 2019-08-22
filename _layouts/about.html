@@ -32,7 +32,7 @@
         </h1>
         <div class="project-info">
           <h2 class="project-tagline">
-            {{ page.description | default: site.description | default: site.github.project_tagline }}
+            {{ page.about_me | default: site.about_me | default: site.github.project_tagline }}
           </h2>
           <div class="project-btns">
             {% if site.show_downloads %}

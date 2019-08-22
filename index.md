@@ -50,7 +50,7 @@ _Make apps run as fast as possible_
 **Type definition:**
 
 - **NLP: Natural Language Processing**
-- **data-visualization: make data visualize and interactable through web**
+- **data-visualization: make data visualizable and interactable on web**
 - **LINE-bot: front-end or back-end app for LINE bot**
 - **other: web apps for faculty, side project or practice**
 
@@ -63,7 +63,8 @@ _Make apps run as fast as possible_
 | LINE-bot           | Boilerplate for LINE's [LIFF](https://developers.line.biz/en/docs/liff/overview/){:target="\_blank"}{:rel="noopener noreferrer"} | [open ](https://bensonliao.github.io/liff-react-boilerplate/){:target="\_blank"}{:rel="noopener noreferrer"}                          |
 | LINE-bot           | LINE-bot API helper for imgur.com                                                                                                | [open ](https://github.com/BensonLiao/imgur-api-go-v3){:target="\_blank"}{:rel="noopener noreferrer"}                                 |
 | LINE-bot           | LINE bot server                                                                                                                  | [open ](https://my-line-simple-bot.herokuapp.com/){:target="\_blank"}{:rel="noopener noreferrer"}                                     |
-| NLP                | A QA system base on indexed news data                                                                                            | [open ](http://rsp.itc.ntnu.edu.tw/ECORE/){:target="\_blank"}{:rel="noopener noreferrer"}                                             |
+| NLP                | Knowledge QA system base on indexed news data                                                                                    | [open ](http://rsp.itc.ntnu.edu.tw/ECORE/){:target="\_blank"}{:rel="noopener noreferrer"}                                             |
+| data-visualization | Knowledge Search Portal, visulize search result as network graph                                                                 | [open ](http://ir.itc.ntnu.edu.tw/udn/){:target="\_blank"}{:rel="noopener noreferrer"}                                                |
 | data-visualization | Discover NTNU year stats visually                                                                                                | [open ](http://www.iro.ntnu.edu.tw/web/?Yreport){:target="\_blank"}{:rel="noopener noreferrer"}                                       |
 | other              | Data report system for NTNU's faculty<br>\*login aren't available on mobile<br>\*guest login: test/123                           | [open ](http://yreport.iro.ntnu.edu.tw/){:target="\_blank"}{:rel="noopener noreferrer"}                                               |
 | other              | Deletable todo-list with redux                                                                                                   | [open ](https://github.com/BensonLiao/redux-todos-with-delete){:target="\_blank"}{:rel="noopener noreferrer"}                         |
