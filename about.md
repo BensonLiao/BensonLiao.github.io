@@ -19,7 +19,7 @@ draduate from National Yunlin University of Science and Technology
 for master degree.
 
 Enjoy in watching movies/concert/sports game,
-sight seeing, photo shooting (with my old pal: sony a77 DSLR or just phone), playing badminton, video games and guitar.
+sight seeing, photo shooting (with my old pal: sony a77 DSLR or just phone), biking, playing badminton, video games and guitar.
 
 Experienced several years of software developing and full-stack engineering.
 
