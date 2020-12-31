@@ -10,31 +10,31 @@ There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project. -->
 
-# Let's introduce myself... {#introduce}
+# Let me introduce myself... {#introduce}
 
-Live in Taiwan, born in Taipei city and study in Yunlin city.
+Lives in Taiwan, born in Taipei city and study in Yunlin city.
 
-Love watch movies/concert/sports game, sight seeing, play badminton, video games.
+Love watch movies/concert/sports game, listen to music, sight seeing, play badminton, video games.
 
-Experienced several years of software developing and full-stack engineering.
+Experienced several years of software development and full-stack engineering.
 
-Recently focus on front-end developing,
-try to make some funny, useful, well-performance web applications.
+Recently focus on front-end development,
+try to make some funny, useful, well-performanced web applications.
 
 ---
 
 # Service offers {#service}
 
-Provide 7 years of web application and software developing experience,
+Provide 7 years of web application and software develope experience,
 with performance tuning.
 
-## _Web develope_
+## _Web developement_
 
 _Build reliable web apps for user needs_
 
 ## _Web design_
 
-_From full-stack develop to UI/UX thinking_
+_From full-stack development to UI/UX thinking_
 
 ## _Performance optimize_
 
