@@ -18,7 +18,7 @@ Live in Taiwan, born in 1984 at Taipei city and
 graduate from National Yunlin University of Science and Technology
 for master degree.
 
-Enjoy in watching movies/concert/sports game,
+Enjoy in watching movies/concert/sports game, listen to music,
 sight seeing, photo shooting (with my old pal: sony a77 DSLR or just phone), biking, playing badminton, video games and guitar.
 
 Experienced several years of software development and full-stack engineering.
