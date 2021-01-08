@@ -70,6 +70,9 @@ _Make apps run as fast as possible_
 | other              | Deletable todo-list with redux                                                                                                   | [open ](https://github.com/BensonLiao/redux-todos-with-delete){:target="\_blank"}{:rel="noopener noreferrer"}                         |
 | other              | Get sub-rediit from API server with redux-saga                                                                                   | [open ](https://github.com/BensonLiao/redux-reddit-api){:target="\_blank"}{:rel="noopener noreferrer"}                                |
 | data-visualization | Playground for React & D3.js                                                                                                     | [open ](https://codesandbox.io/s/p3zjl1yr0j){:target="\_blank"}{:rel="noopener noreferrer"}                                           |
+| other              | React version of content editable dom                                                                                 | [open ](https://github.com/BensonLiao/react-content-editable){:target="\_blank"}{:rel="noopener noreferrer"}                                |
+| other              | A simlple router without flux or redux for React                                                                                | [open ](https://github.com/BensonLiao/capybara-router){:target="\_blank"}{:rel="noopener noreferrer"}                                |
+
 
 Add my LINE bot as a friend:
 
